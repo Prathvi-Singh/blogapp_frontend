@@ -39,6 +39,9 @@ const Login=(props)=>{
          setError('');
          sessionStorage.setItem('accessToken',`Bearer ${response.data.accessToken}`)
          sessionStorage.setItem('refreshToken',`Bearer ${response.data.refreshToken}`)
+         sessionStorage.setItem('email',response.data.email)
+         sessionStorage.setItem('name',response.data.name)
+         
          setAccount({email:response.data.email,name:response.data.name})  
          console.log(props.userAuth);
          order();

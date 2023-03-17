@@ -11,7 +11,8 @@ import UpdatePost from './Component/Create/updatePost.js'
 
 const PrivateRoute = ({ isAuthenticate, ...props }) => {
   console.log("isAuthenticate : ", isAuthenticate)
-  return isAuthenticate ?
+  var a=sessionStorage.getItem('accessToken');
+  return isAuthenticate || a!=null?
     <>
       <Navbar></Navbar>
       <Outlet />

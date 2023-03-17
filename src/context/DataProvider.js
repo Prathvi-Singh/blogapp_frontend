@@ -3,7 +3,10 @@ import { createContext ,useState } from "react";
 export const DataContext = createContext(null)
 
 const DataProvider = ({children}) =>{
-    const [account,setAccount]=useState({email:'' ,name:''})
+    var name=sessionStorage.getItem('name')
+    var email=sessionStorage.getItem('email');
+    const [account,setAccount]=useState({email:email ,name:name})
+   
     return (
         <DataContext.Provider value={{
             account,

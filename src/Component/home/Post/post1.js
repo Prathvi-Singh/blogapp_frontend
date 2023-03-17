@@ -1,4 +1,5 @@
 import React from 'react';
+import './post1.css'
 
 const style1={
     width: "22rem",
@@ -18,15 +19,15 @@ export const Post1=(props)=>{
       <>
 
 
-<div class="card mx-4 mt-4 " style={style1}>
+<div class="card  mt-4 " style={style1}>
 <img src={props.picture} style={{height:"150px"}}/>
 <div class="card-body  text-center">
 
-<h2 class="card-title">{props.category}</h2>
-  <h5 class="card-title">{props.title}</h5>
-  <p class="card-text">{props.description}</p>
+<h2 class="card-title" style={{wordWrap:'"break-word"'}}>{props.category}</h2>
+  <h5 class="card-title" style={{wordWrap:'"break-word"'}}>{props.title}</h5>
+  <p class="card-text" style={{wordWrap:'"break-word"'}}>{props.description}</p>
   {/* <h2 class="card-title">{props.date}</h2> */}
-  <h2 class="card-title">{props.useremail}</h2>
+  <h2 class="card-title" style={{wordWrap:'"break-word"'}}>{props.useremail}</h2>
   <a href="#" class="btn btn-primary">want to view</a>
 </div>
 </div>

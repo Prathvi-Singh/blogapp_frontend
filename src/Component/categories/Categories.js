@@ -4,13 +4,16 @@ import {Link,useSearchParams} from 'react-router-dom';
 
 const style1={
     width:"100%",
-
+    wordBreak: "break-all",
     wordWrap: "break-word",
+    overFlow: " hidden",
+    whiteSpace: 'pre-wrap', overflowWrap: 'break-word'
 }
 const Categories = () => {
         
     const [searchParams]=useSearchParams();
     const category=searchParams.get("category")
+    console.log("--?",category);
 
 
     return (
@@ -18,13 +21,11 @@ const Categories = () => {
        <>
          
 
-               <div className="contaner-fluid  border border-success ">  
-                  <ol class="text-left mr-5 ">
-                {/* <table> */}
-                        {/* <tr> */}
-                            {/* <button></button> */}
+               <div className="contaner-fluid  mt-4 ">  
+                  <div class="align-items-center ">
+                
                             <Link  to={`/create?category=${category || ''}`}>
-                            <li type="button" class="btn btn-outline-secondary " style={style1}>Create new Blog</li>
+                            <div type="button" class="btn btn-outline-secondary " style={style1}>Create new Blog</div>
                             </Link>
                         {/* </tr> */}
 
@@ -34,9 +35,9 @@ const Categories = () => {
                                     // <td>
                                        
                                          <Link to={`/?category=${category.type}`}>
-                                         <li type="button" class="btn btn-outline-info " style={style1}> 
+                                         <div type="button" class="btn btn-outline-info " style={style1}> 
                                          {category.type}
-                                         </li>
+                                         </div>
                                          </Link>
                                   
 
@@ -46,7 +47,7 @@ const Categories = () => {
                                 // </tr>
                             ))
                         }
-           </ol>  
+           </div>  
 
                     </div>   
  

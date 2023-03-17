@@ -33,7 +33,7 @@ export const Post=()=>{
      {
 
    posts && posts.length > 0 ? posts.map(post=>(<div>
-    <Link to={`details/${post._id}`} style={{textDecoration:'none' ,color:'inherit'}}>
+    <Link to={`details/${post._id}`}  style={{textDecoration:'none' ,color:'inherit'}}>
     <Post1 title={post.title} description={post.description} picture={post.picture} date={post.createDate} category={post.categories} useremail={post.email}>
       </Post1>
       </Link>

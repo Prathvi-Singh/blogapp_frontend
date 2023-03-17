@@ -2,7 +2,7 @@ import axios from 'axios';
 import { API_NOTIFICATION_MESSAGES ,SERVICE_URLS } from '../constants/config';
 import { getAccessToken ,getType } from '../Component/utilis/common-auth';
 
-const APL_URL ="http://localhost:8000";
+const APL_URL = "http://localhost:8000";
 
 const axiosInstance =axios.create({
     baseURL: APL_URL,

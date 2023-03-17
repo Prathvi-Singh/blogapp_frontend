@@ -15,15 +15,15 @@ const Home=()=>{
         <>
         <Banner></Banner>
         <div className="container-fluid">
-                <div class="row border border-primary">
+                <div class="row ">
 
-                <div class=" col-12 col-sm-12 col-lg-2 ">
+                <div class=" col-12 col-sm-4 col-lg-2 ">
                 <Categories></Categories>
              </div>
 
-        <div class="col-12 col-sm-12 col-lg-10 border border-primary text-center ">
-        <h1 > Hello , I am Post</h1>
-          <div class="row  " >
+        <div class="col-12 col-sm-8 col-lg-10  align-items-center ">
+        {/* <h1 > Hello , I am Post</h1> */}
+          <div class="row  d-flex justify-content-around" >
          
           <Post></Post>
        
