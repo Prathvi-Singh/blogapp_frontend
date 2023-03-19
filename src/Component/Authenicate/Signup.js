@@ -31,9 +31,10 @@ const Signup=(props)=>{
      const signupUser = async()=>{
        
         const response= await API.userSignup(details);
-        // if(response.isSuccess){
-        //    Navigate('/');
-        // }
+        if(response.isSuccess){
+           setDetails({});
+           Navigate('/');
+        }
         console.log(response);
 
      }

@@ -41,8 +41,8 @@ const Login=(props)=>{
          sessionStorage.setItem('refreshToken',`Bearer ${response.data.refreshToken}`)
          sessionStorage.setItem('email',response.data.email)
          sessionStorage.setItem('name',response.data.name)
-         
-         setAccount({email:response.data.email,name:response.data.name})  
+         sessionStorage.setItem('id',response.data.id)
+         setAccount({email:response.data.email,name:response.data.name,id:response.data.id})  
          console.log(props.userAuth);
          order();
          Navigate('/');

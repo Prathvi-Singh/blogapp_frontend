@@ -4,6 +4,8 @@ import { getAccessToken ,getType } from '../Component/utilis/common-auth';
 
 const APL_URL = "https://blog-app-backend-0q8t.onrender.com";
 
+//const APL_URL="http://localhost:8000";
+
 const axiosInstance =axios.create({
     baseURL: APL_URL,
     timeout:100000,

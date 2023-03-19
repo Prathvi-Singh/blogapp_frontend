@@ -80,7 +80,7 @@ export const Details=()=>{
        </Link>
        </div> 
        :
-       <div>hello</div> 
+       <div></div> 
         }
         </div>
         <div className="container  mt-5">

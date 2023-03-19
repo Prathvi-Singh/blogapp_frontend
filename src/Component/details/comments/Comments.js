@@ -12,18 +12,21 @@ export const Comments =({post})=>{
    const [comment,setComments]=useState({
     name:"",
     postId:"",
+    userId:account.id,
     comment:"",
     date:new Date(),
    })
    const Navigate=useNavigate();
    const handleChange=(e)=>{
-
+     
     setComments({...comment,
-        name:account.email,
+        name:account.name,
         postId:post._id,
         comment:e.target.value,
+        userId:account.id
         
     })
+    console.log(account.id);
     console.log(comment);
    }
 
@@ -44,7 +47,7 @@ export const Comments =({post})=>{
   
 
   const deletecomments=async(id)=>{
-  
+   
     const response = await API.deleteComm(id);
     if(response.isSuccess){
 
@@ -103,11 +106,19 @@ export const Comments =({post})=>{
                      <button>edit</button>
                      </div> */}
                      <div>
-                     <div onClick={()=>{
-                        console.log(c._id);
+                     {
+                      account.id===c.userId ?  
+                       <div onClick={()=>{
+                       // console.log(c.userId);
                         deletecomments(c._id);
                      }}><img src={del}></img></div>
+                     :
+                     <div></div>
+
+                     }
+                   
                      </div>
+
                      </div>
                      </div>
                     
