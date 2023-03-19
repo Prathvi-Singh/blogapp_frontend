@@ -1,10 +1,10 @@
 import React ,{useState,useContext} from 'react';
-import API from '../service/api';
-import { DataContext } from '../context/DataProvider';
+import API from '../../service/api';
+import { DataContext } from '../../context/DataProvider';
 import { useNavigate } from 'react-router-dom';
  const style1={
 
-     width:"40%",
+     width:"65%",
  }
 
 const Login=(props)=>{
@@ -49,6 +49,7 @@ const Login=(props)=>{
        
         }
        else{
+        //alert();
         setError("there is some error")
        }
     }
@@ -60,7 +61,7 @@ const Login=(props)=>{
             <div class="container mt-5 text-center" style={style1}>
                 <h1>👀App</h1>
                 <div >
-                    <div class="form-group">
+                    <div class="form-group mt-5">
 
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" 
                         placeholder="Email address"
@@ -76,7 +77,7 @@ const Login=(props)=>{
                          onChange={handleChange} />
                     </div>
 
-                    <button type="submit" class="btn btn-outline-success btn-lg"  onClick={(loginUser)}>Submit</button>
+                    <button type="submit" class="btn btn-outline-success btn-lg mt-4"  onClick={(loginUser)}>Submit</button>
                     <br></br>
                     <button type="submit" class="btn btn-outline-primary btn-lg mt-4" onClick={()=>{
                         console.log(props.index);

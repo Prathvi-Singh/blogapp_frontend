@@ -3,7 +3,9 @@
   } */
   .card:hover {
     transform: scale(1.1);
+    background-color: coral;
   }
   .card {
     transition: transform 0.5s;
 }
+/* tr:hover } */

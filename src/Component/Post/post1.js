@@ -27,7 +27,7 @@ export const Post1=(props)=>{
   <h5 class="card-title" style={{wordWrap:'"break-word"'}}>{props.title}</h5>
   <p class="card-text" style={{wordWrap:'"break-word"'}}>{props.description}</p>
   {/* <h2 class="card-title">{props.date}</h2> */}
-  <h2 class="card-title" style={{wordWrap:'"break-word"'}}>{props.useremail}</h2>
+  <h2 class="card-title" style={{wordWrap:'"break-word"'}}>{props.name}</h2>
   <a href="#" class="btn btn-primary">want to view</a>
 </div>
 </div>

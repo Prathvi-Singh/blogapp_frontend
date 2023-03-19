@@ -1,8 +1,8 @@
 import React from 'react';
 import {Link} from  'react-router-dom'
-import Banner from './Banner/banner.js'
-import Categories from './categories/Categories.js'
-import {Post} from './home/Post/post.js'  
+import Banner from '../Banner/banner.js'
+import Categories from '../categories/Categories.js'
+import {Post} from '../Post/post.js'  
 
 
 const style1={

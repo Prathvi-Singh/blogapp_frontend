@@ -1,13 +1,13 @@
 import { useState } from 'react'
-import Login from './Component/Login'
-import Auth from './Component/Auth'
+import Login from './Component/Authenicate/Login'
+import Auth from './Component/Authenicate/Auth'
 import DataProvider from './context/DataProvider';
-import Home from './Component/Home.js'
+import Home from './Component/home/Home.js'
 import { BrowserRouter, Routes, Route, Outlet, Navigate } from 'react-router-dom'
-import Navbar from './Component/Navbar';
+import Navbar from './Component/Navbar/Navbar';
 import CreatePost from './Component/Create/createPost.js'
 import {Details} from './Component/details/Details'
-import UpdatePost from './Component/Create/updatePost.js'
+import UpdatePost from './Component/Update/updatePost.js'
 
 const PrivateRoute = ({ isAuthenticate, ...props }) => {
   console.log("isAuthenticate : ", isAuthenticate)

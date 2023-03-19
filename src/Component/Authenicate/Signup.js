@@ -1,6 +1,6 @@
 import React , {useState} from 'react';
 import {useNavigate} from 'react-router-dom'
-import API from '../service/api';
+import API from '../../service/api';
  const style1={
 //     width:"1000%", 
 //     height:"100%",
@@ -10,7 +10,7 @@ import API from '../service/api';
 //     alignItems:"center",
 //     border:" 3px solid black",
 //     topMargin:"50px",
-     width:"40%",
+     width:"60%",
  }
 
 const Signup=(props)=>{
@@ -44,7 +44,7 @@ const Signup=(props)=>{
             <div class="container mt-5 text-center" style={style1}>
                 <h1>👀App</h1>
                 <div  >
-                    <div class="form-group">
+                    <div class="form-group mt-5">
 
                         <input type="text" class="form-control" id="exampleInputPassword1" 
                         placeholder="Name" 
@@ -72,7 +72,7 @@ const Signup=(props)=>{
                     <br></br>
                     <br></br>
                     <button type="submit" class="btn btn-outline-success btn-lg" 
-                    style={{ wordWrap: "break-word"}}
+                    style={{whiteSpace: 'pre-wrap', overflowWrap: 'break-word'}}
                     onClick={()=>{
                           props.onSelect(props.index);
                     }} >Already have Account</button>

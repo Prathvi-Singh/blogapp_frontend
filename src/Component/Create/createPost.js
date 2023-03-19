@@ -14,7 +14,7 @@ const style1={
 const CreatePost=()=>{
     const Navigate=useNavigate();
    
-  
+    const {account}=useContext(DataContext);
 
     const [postData,setData]=useState({
         email:"",
@@ -23,11 +23,12 @@ const CreatePost=()=>{
         picture:img2,
         createDate:new Date(),
         categories:"",
+        name:account.name
     })
 
     const [file,setFiles]=useState()
 
-    const {account}=useContext(DataContext);
+   
 
 
     const handleChange=(e)=>{

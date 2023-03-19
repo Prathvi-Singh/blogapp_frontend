@@ -17,6 +17,7 @@ export const Details=()=>{
   const Navigate=useNavigate();
 
     const {account}= useContext(DataContext)
+
     const [post,setPost]=useState({})
     console.log("--- ",account.email);
     const {id}=useParams();
@@ -28,6 +29,9 @@ export const Details=()=>{
           console.log(response);
           if(response.isSuccess){
             setPost(response.data);
+        //    var datefrompost =post.createDate.toDateString();
+           
+           
           }
       }
 
@@ -45,7 +49,7 @@ export const Details=()=>{
    // const date=post.createDate;
     return (
         <>
-                  <div className="container-fluid" >
+                  <div className="container-fluid " >
         <img src={post.picture} style={style1}></img>
 </div>  
         <div class="container-fluid ">
@@ -55,11 +59,11 @@ export const Details=()=>{
 
 
           <div class="col-12 col-sm-12 col-lg-6 ">
-          <h1 style={{ wordWrap: "break-word"}}>Author : {post.email}</h1>
+          <h1 style={{ wordWrap: "break-word"}}>Author : {post.name}</h1>
           </div >
           <div class="col-12 col-sm-12 col-lg-6 text-center">
           {/* <h1>category : {post.categories}</h1>    */}
-          <h5 class="mt-2">{post.createDate}</h5>  
+          <h5 class="mt-2">{new Date(post.createDate).toDateString()}</h5>  
           </div>
           </div>
        
