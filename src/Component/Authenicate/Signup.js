@@ -29,12 +29,24 @@ const Signup=(props)=>{
      }
 
      const signupUser = async()=>{
-       
+        
+       // const [name,email,password]=details;
+        
+        if(details.password.length<8){
+            alert("password length must be at least 8 characters");
+            return;
+        }
+   
         const response= await API.userSignup(details);
-        if(response.isSuccess){
+        console.log("---->",response);
+        if(response.data.message==="duplicate"){
+            alert("email already in use");
+        } 
+        else if(response.isSuccess){ 
            setDetails({});
            Navigate('/');
         }
+       
         console.log(response);
 
      }
@@ -63,7 +75,7 @@ const Signup=(props)=>{
                     </div>
                      <div class="form-group">
 
-                        <input type="string" class="form-control" id="exampleInputPassword1" 
+                        <input type="password" class="form-control" id="exampleInputPassword1" 
                         placeholder="Password" 
                         name="password"
                         onChange={inputChange}

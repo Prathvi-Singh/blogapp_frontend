@@ -3,8 +3,7 @@ import API from '../../service/api';
 import { DataContext } from '../../context/DataProvider';
 import { useNavigate } from 'react-router-dom';
  const style1={
-
-     width:"65%",
+   width:"65%",
  }
 
 const Login=(props)=>{
@@ -31,7 +30,10 @@ const Login=(props)=>{
         props.userAuth("true");
      }
 
-    const loginUser = async()=>{
+    const loginUser = async()=>{       
+ 
+
+
        const response=await API.userLogin(login);
       
     //    console.log(response)
@@ -49,7 +51,7 @@ const Login=(props)=>{
        
         }
        else{
-        //alert();
+    
         setError("there is some error")
        }
     }
