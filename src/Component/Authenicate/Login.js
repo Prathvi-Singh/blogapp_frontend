@@ -32,7 +32,10 @@ const Login=(props)=>{
 
     const loginUser = async()=>{       
  
-
+       if(login.email==="" || login.password==="") {
+        alert("Please filled them");
+        return;
+       }
 
        const response=await API.userLogin(login);
       

@@ -109,6 +109,10 @@ const CreatePost=()=>{
 }
 
     const savePost = async() =>{
+      if(postData.title.length===0 || postData.description.length===0){
+        alert("Please fill all entities");
+        return ;
+      }
       const response=await API.createPost(postData);
       if(response.isSuccess){
         Navigate('/')

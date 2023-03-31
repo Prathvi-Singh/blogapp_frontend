@@ -13,6 +13,23 @@ import API from '../../service/api';
      width:"60%",
  }
 
+ function checkPassword(password) {
+   
+    const uppercaseRegex = /[A-Z]/;
+    const lowercaseRegex = /[a-z]/;
+    const digitRegex = /[0-9]/;
+  
+    
+    if (uppercaseRegex.test(password) &&
+        lowercaseRegex.test(password) &&
+        digitRegex.test(password)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+
 const Signup=(props)=>{
     const Navigate=useNavigate();
      const [details,setDetails]=useState({
@@ -31,11 +48,24 @@ const Signup=(props)=>{
      const signupUser = async()=>{
         
        // const [name,email,password]=details;
+
+       if(details.name.length ==0 || details.password.length==0 || details.email.length==0){
+        alert("Please all enter details");
+        return;
+       }
         
-        if(details.password.length<8){
+        if(details.password.length<8 ){
             alert("password length must be at least 8 characters");
             return;
         }
+        else if(!checkPassword(details.password)){
+            alert("password must at least one Uppercase ,Lowercase and special character");
+            return;
+        }
+       
+        
+      
+        
    
         const response= await API.userSignup(details);
         console.log("---->",response);

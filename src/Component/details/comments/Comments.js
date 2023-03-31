@@ -86,11 +86,11 @@ export const Comments =({post})=>{
        
         </div>   
          </div>
-         <div class="container">
+         <div class="container my-4">
             {
                
                allcomments.map(c=>(
-                  <div>
+                  <div class="my-2">
                   <div class="card border border-dark" style={{width: "18rem;"}}>
                   <div class="card-header text-info">
                    {c.name}
@@ -105,7 +105,7 @@ export const Comments =({post})=>{
                         
                      <button>edit</button>
                      </div> */}
-                     <div>
+                     <div >
                      {
                       account.id===c.userId ?  
                        <div onClick={()=>{

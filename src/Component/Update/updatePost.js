@@ -95,7 +95,11 @@ const style1={
 }
 
     const updateBlogPost = async() =>{
-      console.log("mai toh upadate tu kha hai",postData);
+      if(postData.title.length===0 || postData.description.length===0){
+        alert("Please fill all entities");
+        return ;
+      }
+     // console.log("mai toh upadate tu kha hai",postData);
       const response=await API.updateBlog(postData);
       if(response.isSuccess){
         Navigate(`/details/${id}`)

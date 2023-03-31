@@ -14,7 +14,7 @@ const Home=()=>{
     return (
         <>
         <Banner></Banner>
-        <div className="container-fluid">
+        <div className="container-fluid my-5">
                 <div class="row ">
 
                 <div class=" col-12 col-sm-4 col-lg-2 ">
