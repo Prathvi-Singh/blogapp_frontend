@@ -70,7 +70,7 @@ const CreatePost=()=>{
     //   }
     //    getImage();
     const getImage=async()=>{
-      const URL = "http://localhost:8000/file/upload";
+      const URL = "https://blog-app-backend-0q8t.onrender.com/file/upload";
       const data =new FormData() 
       data.append("file",file);
       data.append("name", file.name);
